@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.27.xsd">
+
+    <!-- Добавление начальных данных в таблицу users -->
+    <changeSet id="1" author="Hezare">
+        <insert tableName="users">
+            <column name="user_id" value="147373576"/>
+            <column name="user_email" value="egor@gmail.com"/>
+            <column name="password" value="$2a$10$a/KVtwyL3PRXE3Eev2syJOFu8ZQCJqSoEQa22d0ySENdtoWv4Ivym"/>
+            <column name="role" value="PERFORMER"/>
+        </insert>
+        <insert tableName="users">
+            <column name="user_id" value="4729378575"/>
+            <column name="user_email" value="ivan@gmail.com"/>
+            <column name="password" value="$2a$10$2IjvaWUJtullymJOwVcdXewXZv37XffZs75MTOJfH.nUm2N5cMpZu"/>
+            <column name="role" value="PERFORMER"/>
+        </insert>
+        <insert tableName="users">
+            <column name="user_id" value="958294585"/>
+            <column name="user_email" value="aleksandr@gmail.com"/>
+            <column name="password" value="$2a$10$hPIwg2pQOCqpxmwogMAoLenNV/7bM2hWoCw035XruEj2tIjj80yq."/>
+            <column name="role" value="PERFORMER"/>
+        </insert>
+        <insert tableName="users">
+            <column name="user_id" value="2748956984"/>
+            <column name="user_email" value="admin@gmail.com"/>
+            <column name="password" value="$2a$10$X27Vs7mcuGXT1btIGShggOa2LJoc3coNtLCpvL8IFNLvPSbL6DORG"/>
+            <column name="role" value="ADMIN"/>
+        </insert>
+    </changeSet>
+
+    <!-- Добавление начальных данных в таблицу task -->
+    <changeSet id="2" author="Hezare">
+        <insert tableName="task">
+            <column name="task_id" value="2476287645"/>
+            <column name="author_id" value="2748956984"/>
+            <column name="performer_id" value="147373576"/>
+            <column name="title" value="Task for test №1"/>
+            <column name="description" value="Task for testing api №1"/>
+            <column name="task_status" value="IN_ANTICIPATION"/>
+            <column name="task_priority" value="MEDIUM"/>
+        </insert>
+        <insert tableName="task">
+            <column name="task_id" value="67387648734"/>
+            <column name="author_id" value="2748956984"/>
+            <column name="performer_id" value="147373576"/>
+            <column name="title" value="Task for test №2"/>
+            <column name="description" value="Task for testing api №2"/>
+            <column name="task_status" value="IN_PROGRESS"/>
+            <column name="task_priority" value="HIGH"/>
+        </insert>
+        <insert tableName="task">
+            <column name="task_id" value="237653542"/>
+            <column name="author_id" value="2748956984"/>
+            <column name="performer_id" value="4729378575"/>
+            <column name="title" value="Task for test №3"/>
+            <column name="description" value="Task for testing api №3"/>
+            <column name="task_status" value="IN_ANTICIPATION"/>
+            <column name="task_priority" value="LOW"/>
+        </insert>
+        <insert tableName="task">
+            <column name="task_id" value="1354698796"/>
+            <column name="author_id" value="2748956984"/>
+            <column name="performer_id" value="4729378575"/>
+            <column name="title" value="Task for test №4"/>
+            <column name="description" value="Task for testing api №4"/>
+            <column name="task_status" value="IN_ANTICIPATION"/>
+            <column name="task_priority" value="HIGH"/>
+        </insert>
+        <insert tableName="task">
+            <column name="task_id" value="743235743456"/>
+            <column name="author_id" value="2748956984"/>
+            <column name="performer_id" value="4729378575"/>
+            <column name="title" value="Task for test №5"/>
+            <column name="description" value="Task for testing api №5"/>
+            <column name="task_status" value="IN_ANTICIPATION"/>
+            <column name="task_priority" value="HIGH"/>
+        </insert>
+        <insert tableName="task">
+            <column name="task_id" value="2838759873"/>
+            <column name="author_id" value="2748956984"/>
+            <column name="performer_id" value="958294585"/>
+            <column name="title" value="Task for test №6"/>
+            <column name="description" value="Task for testing api №6"/>
+            <column name="task_status" value="COMPLETED"/>
+            <column name="task_priority" value="HIGH"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>
